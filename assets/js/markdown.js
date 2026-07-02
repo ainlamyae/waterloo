@@ -1,6 +1,6 @@
 /**
- * Minimal Markdown -> HTML renderer for the exact subset produced by
- * scripts/docx_to_md.py: `##`/`###`/`####` headings with optional
+ * Minimal Markdown -> HTML renderer for a specific subset:
+ * `##`/`###`/`####` headings with optional
  * `{#id}` anchors, paragraphs, bold/italic emphasis, [text](url) links,
  * `-`/`1.` lists (2-space nesting), and GFM-style pipe tables.
  *
