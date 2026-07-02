@@ -93,6 +93,7 @@
       return res.text();
     })
     .then((raw) => {
+      raw = raw.replace(/\r\n/g, "\n");
       const { meta, body } = parseFrontmatter(raw);
       if (meta.title) {
         document.title = meta.title + " | راهنمای تازه‌واردین به واترلو";
