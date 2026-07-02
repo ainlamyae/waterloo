@@ -4,7 +4,27 @@ lang: fa
 ---
 
 
+## تور دانشگاه واترلو {#section-0}
+
+پیش از سفر، نگاهی تصویری به محوطه دانشگاه واترلو بیندازید.
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube-nocookie.com/embed/yhhuSXlzi_c" title="تور دانشگاه واترلو" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+نقشه محوطه دانشگاه واترلو:
+
+<div class="video-wrap map-wrap">
+  <iframe src="https://uwaterloo.ca/map/" title="نقشه دانشگاه واترلو" loading="lazy"></iframe>
+</div>
+
 ## حمل و نقل {#section-1}
+
+مسیر پیشنهادی از ترمینال ۱ فرودگاه پیرسون تورنتو تا دانشگاه واترلو:
+
+<div class="video-wrap map-wrap section-map">
+  <iframe src="https://www.google.com/maps?saddr=Toronto+Pearson+International+Airport+Terminal+1&daddr=University+of+Waterloo&output=embed" title="مسیر فرودگاه پیرسون تورنتو (ترمینال ۱) تا دانشگاه واترلو" loading="lazy"></iframe>
+</div>
 
 ### انتقال از فرودگاه {#section-1-1}
 

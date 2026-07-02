@@ -18,6 +18,31 @@ R = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
 
 SKIP_STYLES = {"TOCHeading", "TOC1", "TOC2"}
 
+# Hand-authored embeds that aren't in the source docx, kept here (not in
+# app.js) so content/guide.md stays the single source of truth for the page.
+INTRO_BLOCK = "\n\n".join(
+    [
+        "## تور دانشگاه واترلو {#section-0}",
+        "پیش از سفر، نگاهی تصویری به محوطه دانشگاه واترلو بیندازید.",
+        '<div class="video-wrap">\n'
+        '  <iframe src="https://www.youtube-nocookie.com/embed/yhhuSXlzi_c" title="تور دانشگاه واترلو" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>\n'
+        "</div>",
+        "نقشه محوطه دانشگاه واترلو:",
+        '<div class="video-wrap map-wrap">\n'
+        '  <iframe src="https://uwaterloo.ca/map/" title="نقشه دانشگاه واترلو" loading="lazy"></iframe>\n'
+        "</div>",
+    ]
+)
+
+DIRECTIONS_BLOCK = "\n\n".join(
+    [
+        "مسیر پیشنهادی از ترمینال ۱ فرودگاه پیرسون تورنتو تا دانشگاه واترلو:",
+        '<div class="video-wrap map-wrap section-map">\n'
+        '  <iframe src="https://www.google.com/maps?saddr=Toronto+Pearson+International+Airport+Terminal+1&daddr=University+of+Waterloo&output=embed" title="مسیر فرودگاه پیرسون تورنتو (ترمینال ۱) تا دانشگاه واترلو" loading="lazy"></iframe>\n'
+        "</div>",
+    ]
+)
+
 
 def load_rels(zf):
     try:
@@ -217,6 +242,8 @@ def convert(docx_path, out_path):
                 h1_count += 1
                 h2_count = 0
                 blocks.append(f"## {text} {{#section-{h1_count}}}")
+                if h1_count == 1:
+                    blocks.append(DIRECTIONS_BLOCK)
             elif style == "Heading2":
                 flush_list()
                 h2_count += 1
@@ -239,7 +266,7 @@ def convert(docx_path, out_path):
     flush_list()
 
     frontmatter = f"---\ntitle: {title}\nlang: fa\n---\n"
-    content = frontmatter + "\n\n" + "\n\n".join(blocks) + "\n"
+    content = frontmatter + "\n\n" + INTRO_BLOCK + "\n\n" + "\n\n".join(blocks) + "\n"
 
     with open(out_path, "w", encoding="utf-8", newline="\n") as f:
         f.write(content)

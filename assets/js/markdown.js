@@ -101,6 +101,9 @@
       .map((block) => {
         const trimmed = block.trim();
         if (!trimmed) return "";
+        // raw HTML block (e.g. a hand-authored video/map embed): pass through
+        // untouched instead of wrapping in <p>, since it's not inline text
+        if (/^</.test(trimmed)) return trimmed;
         if (/^#{2,4}\s+/.test(trimmed)) return renderHeading(trimmed);
         if (trimmed.split("\n").every((l) => /^\s*\|/.test(l))) return renderTable(trimmed);
         if (trimmed.split("\n").every((l) => /^\s*(-|\d+\.)\s+/.test(l))) return renderList(trimmed);

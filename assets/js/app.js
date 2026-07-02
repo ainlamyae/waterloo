@@ -19,8 +19,7 @@
   }
 
   function buildNav() {
-    const introHeading = document.querySelector("#intro-video h2[id]");
-    const sections = [introHeading, ...contentEl.querySelectorAll("h2[id]")].filter(Boolean);
+    const sections = contentEl.querySelectorAll("h2[id]");
     navList.innerHTML = "";
     sections.forEach((heading) => {
       const li = document.createElement("li");
@@ -78,27 +77,6 @@
     sections.forEach((s) => observer.observe(s));
   }
 
-  function insertAirportDirections() {
-    const heading = document.getElementById("section-1");
-    if (!heading) return;
-
-    const caption = document.createElement("p");
-    caption.className = "video-caption";
-    caption.textContent = "مسیر پیشنهادی از ترمینال ۱ فرودگاه پیرسون تورنتو تا دانشگاه واترلو:";
-
-    const wrap = document.createElement("div");
-    wrap.className = "video-wrap map-wrap section-map";
-    const iframe = document.createElement("iframe");
-    iframe.loading = "lazy";
-    iframe.title = "مسیر فرودگاه پیرسون تورنتو (ترمینال ۱) تا دانشگاه واترلو";
-    const origin = encodeURIComponent("Toronto Pearson International Airport Terminal 1");
-    const destination = encodeURIComponent("University of Waterloo");
-    iframe.src = `https://www.google.com/maps?saddr=${origin}&daddr=${destination}&output=embed`;
-    wrap.appendChild(iframe);
-
-    heading.after(caption, wrap);
-  }
-
   function showError() {
     contentEl.innerHTML =
       '<div class="load-error">' +
@@ -121,7 +99,6 @@
         titleEl.textContent = meta.title;
       }
       contentEl.innerHTML = MiniMarkdown.render(body);
-      insertAirportDirections();
       const sections = buildNav();
       setupNavInteractions(sections);
 

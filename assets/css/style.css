@@ -99,17 +99,6 @@ body {
   max-width: 860px;
 }
 
-#intro-video {
-  margin-bottom: 2.75rem;
-}
-
-#intro-video h2 {
-  font-size: 1.3rem;
-  margin: 0 0 0.4rem;
-  color: var(--black);
-  scroll-margin-top: calc(var(--header-height) + 1rem);
-}
-
 .video-caption {
   margin: 0 0 1rem;
   color: var(--muted);
@@ -139,7 +128,7 @@ body {
   height: 480px;
 }
 
-#intro-video .video-caption + .video-wrap,
+.video-caption + .video-wrap,
 .video-wrap + .video-caption {
   margin-top: 1.75rem;
 }
@@ -356,7 +345,8 @@ body {
   .site-header,
   #sidebar,
   #nav-backdrop,
-  #intro-video {
+  .video-wrap,
+  .video-caption {
     display: none;
   }
 
