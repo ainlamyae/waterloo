@@ -15,9 +15,6 @@ assets/
   js/app.js                    واکشی guide.md، رندر آن، ساخت منو و اسکرول نرم
   logo.svg, favicon.svg        نشان برگ‌افرا + نشانگر مکان (وکتور)
   favicon-32.png, favicon-180.png, og-image.png   خروجی‌های رستری نشان
-scripts/
-  docx_to_md.py                 تبدیل فایل docx منبع به content/guide.md
-  generate_logo.py              ساخت نشان و تصاویر از روی همان مختصات هندسی
 ```
 
 ## اجرای محلی
@@ -29,25 +26,6 @@ python -m http.server 8000
 ```
 
 سپس `http://localhost:8000` را باز کنید. همین سایت را می‌توان بدون هیچ تغییری روی GitHub Pages هم منتشر کرد.
-
-## بازتولید محتوا از فایل Word
-
-اگر سند اصلی (`Help New Student.docx`) به‌روزرسانی شد، برای ساخت دوبارهٔ `content/guide.md`:
-
-```bash
-python scripts/docx_to_md.py "/path/to/Help New Student.docx" content/guide.md
-```
-
-این اسکریپت فقط از کتابخانهٔ استاندارد پایتون (`zipfile` + `xml.etree.ElementTree`) استفاده می‌کند — نیازی به Pandoc یا python-docx نیست. تیترهای «Heading 1» به بخش‌های اصلی (که در منوی راست سایت نمایش داده می‌شوند)، «Heading 2» به زیربخش‌ها، جدول‌ها به جدول مارک‌داون، و لینک‌ها/فهرست‌ها هم به‌صورت خودکار تبدیل می‌شوند. فهرست مطالب خودکار Word (Table of Contents) نادیده گرفته می‌شود چون سایت منوی خودش را می‌سازد.
-
-## بازتولید نشان (لوگو)
-
-```bash
-pip install pillow arabic-reshaper python-bidi
-python scripts/generate_logo.py
-```
-
-این اسکریپت نشان (برگ‌افرا داخل نشانگر مکان، به رنگ طلایی و مشکی دانشگاه واترلو) را هم به‌صورت SVG و هم PNG (فاوآیکون‌ها و تصویر پیش‌نمایش برای شبکه‌های اجتماعی) از روی مختصات هندسی یکسان تولید می‌کند.
 
 ## مجوز
 
