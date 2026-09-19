@@ -620,6 +620,18 @@ UHIP یک برنامه بیمه درمانی اجباری برای دانشجو�
 - گروه مثنوی‌خوانی: [تلگرام](https://t.me/UW_Masnavi)
   - جلسات هفتگی شرح و مباحثهٔ مثنوی معنوی مولانا
 
+### سایر گروه‌ها و انجمن‌های دانشجویی {#section-10-3}
+
+- برنامهٔ International Peer Community (IPC): [https://uwaterloo.ca/international-experience/international-student-resources/international-peer-community](https://uwaterloo.ca/international-experience/international-student-resources/international-peer-community)
+  - مخصوص آشنایی با سایر دانشجویان اینترنشنال در برنامه‌های عمومی ماهانه و در صورت تمایل شرکت در دورهمی‌های دوستانه‌تر دو هفته یک بار
+- انجمن‌های WUSA: [https://wusa.ca/clubs](https://wusa.ca/clubs)
+  - انجمن‌های متنوع دانشگاه که عمدتا توسط دانشجوهای undergrad اداره می‌شوند، ولی سایر دانشجویان نیز می‌توانند در آنها شرکت کنند.
+- انجمن‌های GSA: [https://gsa.uwaterloo.ca/clubs](https://gsa.uwaterloo.ca/clubs)
+  - دانشجوهای grad نیز می‌توانند در صورت تمایل انجمن مخصوص تشکیل دهند و از مزایای GSA برای انجمن‌ها استفاده کنند.
+- سایت Wat2Do: [wat2do.ca](https://wat2do.ca)
+  - یک سایت جامع برای رصد کردن و اطلاع پیدا کردن از برنامه‌های اجتماعی نزدیک دانشگاه، با دیتابیس تمام انجمن‌ها و گروه‌ها.
+  - برای سایر دانشگاه‌ها نیز صفحات مجزا دازد.
+
 ## اسلامی و حلال {#section-11}
 
 ### مراکز اسلامی {#section-11-1}
